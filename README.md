@@ -16,4 +16,4 @@ streamlit run dashboard.py
 
 ## The dashboard appearance
 
-It has been deployed, [just check this out here](https://starlex-ecommerce-dashboard.streamlit.app/) or  [Watch the video](https://youtu.be/nLvngERN8Qg)
+It has been deployed, [just check it out here](https://starlex-ecommerce-dashboard.streamlit.app/)
