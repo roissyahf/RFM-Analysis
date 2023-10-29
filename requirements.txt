@@ -2,8 +2,8 @@
 # $ conda create --name <env> --file <this file>
 # platform: win-64
 
-jupyter=1.0.0=py310haa95532_8
-pandas=1.5.3=py310h4ed8f06_0
-plotly=5.9.0=py310haa95532_0
-seaborn=0.12.2=py310haa95532_0
-streamlit=1.27.2=pypi_0
+jupyter
+pandas
+plotly
+seaborn
+streamlit==1.27.*
