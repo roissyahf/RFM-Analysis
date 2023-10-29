@@ -16,7 +16,7 @@ to_datetime = df_all.loc[:, ('order_purchase_timestamp',
                              'order_estimated_delivery_date')]
 
 for col in to_datetime:
-    df_all[col] = pd.to_datetime(df_all[col], format='%Y-%m-%d %H:%M:%S')
+    df_all[col] = pd.to_datetime(df_all[col], format='%Y-%m-%d %H:%M:%S', errors='coerce')
 
 # filter dataset to period of analysis: 2017-02 until 2018-08
 df_filtered = df_all[(df_all['order_purchase_timestamp'] >= "2017-02-01 00:00:00") & (df_all['order_purchase_timestamp'] < "2018-09-01 00:00:00")]
