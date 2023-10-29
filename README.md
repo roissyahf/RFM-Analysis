@@ -1,6 +1,6 @@
-# Starlex E-ommerce Dashboard ✨
+# Starlex E-ommerce Dashboard
 
-This is a very simple static dashboard that I built using [this dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). The main objective is to practice how to create dashboard using streamlit. Enjoy!
+This is a very simple static dashboard that I built using [this dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). The main objective is to practice how to create dashboard with streamlit. Enjoy!
 
 ## Setup environment
 ```
@@ -13,3 +13,9 @@ pip install pandas plotly seaborn jupyter streamlit
 ```
 streamlit run dashboard.py
 ```
+
+## The dashboard appearence
+
+It has been deployed, [just check this out here](https://starlex-ecommerce-dashboard.streamlit.app/)
+
+[Watch the video](https://youtu.be/nLvngERN8Qg)

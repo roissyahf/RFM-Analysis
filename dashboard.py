@@ -25,7 +25,7 @@ df_filtered = df_all[(df_all['order_purchase_timestamp'] >= "2017-02-01 00:00:00
 sns.set(style='dark')
 
 # add dashboard header
-st.header('Starlex E-commerce Dashboard')
+st.header('Starlex E-Commerce Dashboard')
 
 # add columns for KPI
 col1, col2, col3 = st.columns(3)
