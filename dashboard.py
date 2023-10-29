@@ -138,11 +138,11 @@ def define_rfm_segment(rfm_df):
 rfm_segments = define_rfm_segment(rfm_df)
 
 # summarize RFM mean in each defined segments
-rfm_summary = rfm_segments.groupby('Segment').agg({
+rfm_summ = rfm_segments.groupby('Segment').agg({
     'recency': 'mean',
     'frequency': 'mean',
     'monetary_value': 'mean'}).round()
-rfm_summary = rfm_summary.sort_values(ascending=False, by='monetary_value')
+rfm_summ = rfm_summ.reset_index() 
 
 # count of customers in each defined segments
 rfm_cust_count = rfm_segments.copy()
@@ -159,8 +159,17 @@ st.subheader('Customer segmentation')
 fig = px.bar(rfm_cust_plot, x='Count of Customer', y='Segment Type')
 st.plotly_chart(fig, theme='streamlit', use_container_width=True)
 
-# visualize the rfm summary df
-st.subheader('Mean of RFM in each segments')
-st.dataframe(rfm_summary)
+# visualize the recency and monetary mean in each defined segments
+col1, col2 = st.columns([2, 2])
+
+col1.subheader("Average Recency in each segments")
+recency_df = rfm_summ.sort_values(by='recency', ascending=False)
+fig = px.bar(recency_df, x='recency', y='Segment')
+col1.plotly_chart(fig, theme='streamlit', use_container_width=True)
+
+col2.subheader("Average Monetary value in each segments")
+monetary_df = rfm_summ.sort_values(by='monetary_value', ascending=True)
+fig = px.bar(monetary_df, x='monetary_value', y='Segment')
+col2.plotly_chart(fig, theme='streamlit', use_container_width=True)
 
 # END
