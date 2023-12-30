@@ -1,4 +1,4 @@
-# Starlex E-ommerce Dashboard
+# Starlex E-Commerce Dashboard
 
 This is a very simple static dashboard that I built using [this dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). The main objective is to practice how to create dashboard with streamlit. Enjoy!
 
